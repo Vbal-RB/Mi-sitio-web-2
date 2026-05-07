@@ -26,43 +26,38 @@
             font-weight: bold;
             color: white;
             text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-            animation: movimiento 3s infinite ease-in-out;
+            animation: movimientoIzquierda 2s infinite ease-in-out;
             position: absolute;
             left: 10%;
-            transform: translateX(-50%);
         }
 
         .numero.derecha {
             left: auto;
             right: 10%;
-            transform: translateX(50%);
+            animation: movimientoDerecha 2s infinite ease-in-out;
         }
 
-        @keyframes movimiento {
+        @keyframes movimientoIzquierda {
             0% {
-                transform: translateX(-50%) translateY(0);
+                transform: translateY(0);
             }
             50% {
-                transform: translateX(-50%) translateY(100px);
+                transform: translateY(100px);
             }
             100% {
-                transform: translateX(-50%) translateY(0);
+                transform: translateY(0);
             }
-        }
-
-        .numero.derecha {
-            animation: movimientoDerecha 3s infinite ease-in-out;
         }
 
         @keyframes movimientoDerecha {
             0% {
-                transform: translateX(50%) translateY(0);
+                transform: translateY(100px);
             }
             50% {
-                transform: translateX(50%) translateY(100px);
+                transform: translateY(0);
             }
             100% {
-                transform: translateX(50%) translateY(0);
+                transform: translateY(100px);
             }
         }
     </style>
